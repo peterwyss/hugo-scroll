@@ -3,13 +3,13 @@
 {{ $sections := $headless.Resources.ByType "page" }}
 {{ $sections := cond .Site.BuildDrafts $sections (where $sections "Draft" "==" false) }}
 <header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})" {{ end }}>
-
+<!--
         <div class="status">
             <i class="fa fa-minus-square fa-2x"  >Bad</i>
             <i class="fa fa-minus-square fa-2x">Küche</i>
             <i class="fa fa-minus-square fa-2x">Bar</i>
         </div>
-
+    -->        
     <div class="vertical">
 
         <div id="site-head-content" class="inner">
@@ -36,6 +36,15 @@
             <header class="post-header">
                 <h2 class="post-title">{{ .Title }}</h2>
             </header>
+            {{if eq .Title  "News"}}
+            {{ $blog := .Site.GetPage "/blog" }}
+            {{ $blog_sections := $blog.Resources.ByType "page"}}
+            {{ range $index_blog, $elem_blog :=  $blog_sections}}
+            
+            {{ .Title }}
+            {{ .Content }}
+            {{ end }}
+            {{ end }}
             <section class="post-content">
                 {{ .Content }}
             </section>
