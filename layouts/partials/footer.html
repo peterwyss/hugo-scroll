@@ -2,7 +2,9 @@
   <div class="inner">
     {{ with .Site.Params.copyright }}
       <section class="fa fa-copyright"> {{ . | markdownify }}</section>{{ end }}
-
+      <!--
+      <a href="{{ "impressum" | absLangURL }}">Impressum</a>
+      -->
     <section>{{ echoParam .Site.Params "hidebyline" }}</section>
     {{ if ne .Site.Params.hidedesignbyline true }}
       <section>
