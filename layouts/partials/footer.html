@@ -1,8 +1,7 @@
 <footer class="site-footer">
   <div class="inner">
     {{ with .Site.Params.copyright }}
-      <section class="copyright">{{ . | markdownify }}</section>{{ end }}
-
+      <section class="fa fa-copyright"> {{ . | markdownify }}</section>{{ end }}
 
     <section>{{ echoParam .Site.Params "hidebyline" }}</section>
     {{ if ne .Site.Params.hidedesignbyline true }}
