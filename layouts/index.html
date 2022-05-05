@@ -36,12 +36,12 @@
             <header class="post-header">
                 <h2 class="post-title">{{ .Title }}</h2>
             </header>
-            {{if eq .Title  "News"}}
+            {{if eq   .Params.news true }}
             {{ $blog := .Site.GetPage "/blog" }}
             {{ $blog_sections := $blog.Resources.ByType "page"}}
             {{ range $index_blog, $elem_blog :=  $blog_sections}}
-            
-            {{ .Title }}
+        </br>
+            <h4>{{ .Title }}</h4> 
             {{ .Content }}
             {{ end }}
             {{ end }}
