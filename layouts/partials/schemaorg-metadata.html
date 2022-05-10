@@ -1,0 +1,30 @@
+<script type="application/ld+json">
+    {
+        "@context" : "https://schema.org",
+        "@type" : "Restaurant",
+        "@id" : "https://badeplatz.ch",
+        "priceRange" : "$$",
+        "image" : {{ apply .Site.Params.images "absURL" "." }},
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Thalwil",
+            "addressRegion": "ZH",
+            "postalCode" : "8800", 
+            "streetAddress": "Seestrasse 160"
+        },
+        "geo":{
+            "@type":"GeoCoordinates",
+            "latitude":47.2995174,
+            "longitude":8.5644227
+          },
+        "name" : ["Ludibadi","Badeplatz Ludretikon"],
+        "description" : "Quartierbadeplatz mit feinem Take Away",
+        "currenciesAccepted" : "CHF , EUR",
+        "openingHours":["Mo-Fr 09:00-20:00"],
+        "isAccessibleForFree": false,
+        "paymentAccepted":"Cash, Credit Card",
+        "url":"https://badeplatz.ch"
+
+        
+    }
+    </script>
