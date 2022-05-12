@@ -1,18 +1,18 @@
-<div class="waves">
-    <svg id="w" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+<div class="waves"> 
+    <svg id="w-{{ .Params.id }}" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
         baseProfile="full" width="100%" height="100%" viewBox="90 0 900 140">
         <title>Wellen</title>
         <desc>Beschreibung/Textalternative zum Inhalt.</desc>
-        >
+        
         <path d="M50,70 q100,-100 200,0 t200,0 t200,0 t200,0 t200,0 t200,0 " stroke-width="1" fill="hsla(0,0%,75%,0)">
             <animate attributeName="stroke-width" to="30" dur="12s" fill="freeze" />
         </path>
         {{- partial "burger.html" . -}}
         {{- partial "sausage.html" . -}}
 
-        <g id="ente" transform="scale(0.005000,0.005000)" fill="yellow" stroke="none" cursor="pointer"
+        <g id="ente1-{{ .Params.id }}" transform="scale(0.005000,0.005000)" fill="yellow" stroke="none" cursor="pointer"
             onclick="playAudio('audio/duck.wav')">
-            <path id="duck" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
+            <path id="duck1-{{ .Params.id }}" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
 -33 -300 -147 -370 -196 -94 -64 -209 -177 -259 -253 -32 -48 -153 -335 -170
 -401 -3 -15 -18 -53 -33 -85 -14 -31 -45 -111 -68 -177 -47 -132 -134 -323
 -192 -418 -97 -164 -247 -311 -522 -515 -36 -26 -91 -69 -124 -97 -33 -27 -94
@@ -42,8 +42,8 @@
                 path="M50,40 q100,-100 200,0 t200,0 t200,0 t200,0 t200,0 t200,0 t200,0 t200,0 " fill="freeze"
                 rotate="auto-reverse" />
         </g>
-        <g id="ente" transform="scale(0.005000,0.005000)" fill="orange" stroke="none">
-            <path id="duck" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
+        <g id="ente2-{{ .Params.id }}" transform="scale(0.005000,0.005000)" fill="orange" stroke="none">
+            <path id="duck2-{{ .Params.id }}" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
 -33 -300 -147 -370 -196 -94 -64 -209 -177 -259 -253 -32 -48 -153 -335 -170
 -401 -3 -15 -18 -53 -33 -85 -14 -31 -45 -111 -68 -177 -47 -132 -134 -323
 -192 -418 -97 -164 -247 -311 -522 -515 -36 -26 -91 -69 -124 -97 -33 -27 -94
@@ -73,8 +73,8 @@
                 path="M50,40 q100,-100 200,0 t200,0 t200,0 t200,0 t200,0 t200,0 t200,0 t200,0 " fill="freeze"
                 rotate="auto-reverse" begin="15s" />
         </g>
-        <g id="ente" transform="scale(0.005000,0.005000)" fill="yellowgreen" stroke="none">
-            <path id="duck" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
+        <g id="ente3-{{ .Params.id }}" transform="scale(0.005000,0.005000)" fill="yellowgreen" stroke="none">
+            <path id="duck3-{{ .Params.id }}" d="M0, 0 c-19 -6 -78 -22 -130 -36 -52 -14 -108 -31 -125 -37 -84
 -33 -300 -147 -370 -196 -94 -64 -209 -177 -259 -253 -32 -48 -153 -335 -170
 -401 -3 -15 -18 -53 -33 -85 -14 -31 -45 -111 -68 -177 -47 -132 -134 -323
 -192 -418 -97 -164 -247 -311 -522 -515 -36 -26 -91 -69 -124 -97 -33 -27 -94
