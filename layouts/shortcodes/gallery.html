@@ -1,11 +1,11 @@
 <div class="gallery">
 {{ range $.Page.Params.bilder }}
-
-
+<figure>
 <a href="{{ .src }}" class="g-img"    data-lightbox="img" >
     <img class="g-img" src="{{ .src }}" alt="{{ .alt }}" width="340" />
 </a>
-
+<figcaption>{{ .text }}</figcaption>
+</figure>
 {{ end }}
 
 </div>
