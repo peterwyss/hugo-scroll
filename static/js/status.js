@@ -6,12 +6,15 @@ $.getJSON( "/js/status.json", function( data ) {
     console.log( data );
     status = data.badeplatz.status;
     console.log(status)
-    
-    if( status == "geschlossen") {
-        $(elem_g).prependTo( ".status" );
-    }else {
-        $(elem_o).prependTo( ".status" );
+    var elem1 = document.getElementById("offen");
+    var elem2 = document.getElementById("geschlossen");
 
+    if( status == "geschlossen") {
+        elem1.style.visibility = "hidden"
+        elem2.style.visibility = "visible"
+    }else {
+        elem1.style.visibility = "visible";
+        elem2.style.visibility = "hidden";
     }
     
 });
