@@ -24,7 +24,6 @@ $.getJSON( "/js/status.json", function( data ) {
         elem1.style.visibility = "hidden";
         elem2.style.visibility = "hidden";
         elem3.style.visibility = "visible"
-        console.log("Test");
     }
     
 });
